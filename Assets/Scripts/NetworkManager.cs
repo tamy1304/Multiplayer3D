@@ -10,13 +10,11 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public int maximoJugadores = 10;
     public static NetworkManager instancia;
 
-
     private void Awake()
     {
         instancia = this;
         DontDestroyOnLoad(gameObject);
     }
-
 
     private void Start()
     {

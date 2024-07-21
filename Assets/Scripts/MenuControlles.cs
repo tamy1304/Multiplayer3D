@@ -37,8 +37,6 @@ public class MenuControlles : MonoBehaviourPunCallbacks, ILobbyCallbacks
     private List<GameObject> roomElementos = new List<GameObject>();
     private List<RoomInfo> listaRooms = new List<RoomInfo>();
 
-
-    // Start is called before the first frame update
     void Start()
     {
         Debug.Log("Start");
@@ -173,6 +171,7 @@ public class MenuControlles : MonoBehaviourPunCallbacks, ILobbyCallbacks
     public void SalirRoom()
     {
         PhotonNetwork.LeaveRoom();
+        SetPantalla(menuPrincipal);
     }
 
     public void OnLanzarJuegoClicked()
